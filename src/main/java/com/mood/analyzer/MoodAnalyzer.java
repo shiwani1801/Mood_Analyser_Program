@@ -17,7 +17,6 @@ public class MoodAnalyzer {
         else
             return "Sad";
     }
-
     public String checkMood(String mood) {
         if (mood.equals("Happy"))
             return "Happy";
