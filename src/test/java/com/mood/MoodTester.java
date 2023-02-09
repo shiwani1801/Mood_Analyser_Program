@@ -1,6 +1,7 @@
 package com.mood;
 
 import com.mood.analyzer.MoodAnalyzer;
+import com.mood.analyzer.MoodAnalyzerException;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -23,5 +24,9 @@ public class MoodTester {
     public void testAnotherMood() {
         assertEquals("Sad" , obj.checkMood("Sad"));
         assertEquals("Happy" , obj.checkMood("Happy"));
+    }
+    @Test
+    public void testNullMood() throws MoodAnalyzerException {
+        System.out.println(MoodAnalyzer.invalidMoodAnalyser(null));
     }
 }
