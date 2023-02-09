@@ -23,7 +23,7 @@ public class MoodAnalyzer {
             return "Sad";
     }
 
-    public static String invalidMoodAnalyser(String message) throws MoodAnalyzerException {
+    public static String invalidMoodAnalyser(String message) {
         if (message == null)
         {
             try
@@ -35,6 +35,17 @@ public class MoodAnalyzer {
                 return "Happy";
             }
         }
-        return "Sad";
+        else
+        {
+            try
+            {
+                throw new MoodAnalyzerException();
+            }
+            catch (MoodAnalyzerException exception)
+            {
+                return "Invalid Mood";
+            }
+        }
     }
+
 }

@@ -1,6 +1,7 @@
 package com.mood;
 
 import com.mood.analyzer.MoodAnalyzer;
+import com.mood.analyzer.MoodAnalyzerEnum;
 import com.mood.analyzer.MoodAnalyzerException;
 import org.junit.Test;
 
@@ -28,5 +29,10 @@ public class MoodTester {
     @Test
     public void testNullMood() throws MoodAnalyzerException {
         System.out.println(MoodAnalyzer.invalidMoodAnalyser(null));
+    }
+    @Test
+    public void testEmptyMood() {
+        System.out.println(MoodAnalyzer.invalidMoodAnalyser(String.valueOf(MoodAnalyzerEnum.invalidMood)));
+        System.out.println(MoodAnalyzer.invalidMoodAnalyser(String.valueOf(MoodAnalyzerEnum.empty)));
     }
 }
